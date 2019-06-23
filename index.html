@@ -26,18 +26,31 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
   </head>
 
   <body id="page-top">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mainNav">
       <div class="container-fluid">
+        
         <a class="navbar-brand ml-5" href="#">
           <img src="img/logo.png" width="300" class="d-inline-block align-top" alt="">
         </a>
-        <div class="collapse navbar-collapse mr-5" id="navbarTogglerDemo01">
+        
+        <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="animated-icon1"><span></span><span></span><span></span></div>
+        </button>
+
+        <div class="collapse navbar-collapse mr-5 mx-auto" id="navbarResponsive">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-ul">
             <li class="nav-item">
               <a class="nav-link link" href="#home-container">Главная</a>
@@ -68,10 +81,10 @@
           <div class="container-fluid">
           <div class="textBlock">
             <h1>Студия дизайна<br>и web разработки</h1>
-            <a href="">ОСТАВИТЬ ЗАЯВКУ</a>
+            <a href="#contacts-container">ОСТАВИТЬ ЗАЯВКУ</a>
           </div>
           <!-- <img src="img/robot.png" class="d-inline-block align-bottom float-right" style="margin-right: 200px;" alt=""> -->
-          <img src="img/robot-blue.png" class="img-responsive" alt="">
+          <img src="img/robot.png" class="img-responsive" alt="">
         </div>
         </div>
       </div>
@@ -135,7 +148,7 @@
           <div id="particles-js-3"></div>
           <div class="container-fluid">
             <div class="row">
-              <div class="col-md-6 requistion">
+              <div class="col-md-6 col-sm-6 col-6 requistion">
                 <h3>Оставьте заявку</h3>
                 <div class="line2"></div>
                 <form>
@@ -151,13 +164,25 @@
                   </div>
                   <input type="submit"><br>
                 </form>
+                <!-- Modal HTML embedded directly into document -->
+                <div id="ex1" class="modal">
+                  <p>Я согласен(на), что мои персональные данные будут обрабатываться способами, соответствующими целям обработки персональных данных, в т.ч. с использованием средств автоматизации или без использования таких средств. А так же я согласен(на) с тем, что согласие данное мной в электронной форме на сайте является согласием, полностью отвечающим требованиям законодательства о персональных данных и позволяющим подтвердить факт его получения нашим агентством. 
+                  <br>
+                  <br>
+                  Я согласен(на) получать предложения и информацию на указанные мною контакты в данной заявке.</p>
+                </div>
+
+                <!-- Link to open the modal -->
+                <p>Вводя свои данные я соглашаюсь с <a href="#ex1" rel="modal:open">политикой конфиденциальности</a></p>
+
               </div>
-              <div class="col-md-6 contactBlock">
+              <div class="col-md-6 col-sm-6 col-6 contactBlock">
                 <h3>Контакты</h3>
                 <div class="line3"></div>
                 <div style="margin-top: 40px;">
                   <div class="contactTextBlock">
-                    <p style="font-weight: bold;">Телефон:  </p><p> 8 (800) 000-00-00</p>
+                    <p style="font-weight: bold;">Телефон:  </p><br>
+                    <p> 8 (800) 000-00-00</p>
                   </div>
                   <div class="contactImages">
                     <a href=""><img src="img/telegram.png"></a>
@@ -165,7 +190,7 @@
                     <a href=""><img src="img/whatsapp.png"></a>
                   </div>
                   <div class="contactTextBlock">
-                    <p style="font-weight: bold;">Телефон:  </p><p> 8 (987) 271-06-40</p>
+                    <p>8 (987) 271-06-40</p>
                   </div>
                   <div class="contactTextBlock">
                     <p style="font-weight: bold;">E-mail:  </p><p> asteitcom@gmail.com</p>
@@ -178,12 +203,9 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/jquery.easing.min.js"></script>
-
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
+
 
     <!-- Custom scripts for this template -->
     <script src="js/particles.js"></script>
@@ -195,6 +217,19 @@
     <script src="js/fullpage.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+        
+        $('.first-button').on('click', function () {
+          $('.animated-icon1').toggleClass('open');
+        });
+
+        $('a[href="#ex1"]').click(function(event){
+          event.preventDefault();
+          $(this).modal({
+            closeClass: 'icon-remove',
+            closeText: '!'
+          });
+        });
+
         var fullpage = $('#fullpage').fullpage({
           //options here
           anchors: ['home-container','services-container', 'advantages-container', 'contacts-container'],
