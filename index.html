@@ -4,7 +4,7 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -41,8 +41,8 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mainNav">
       <div class="container-fluid">
         
-        <a class="navbar-brand ml-5" href="#">
-          <img src="img/logo.png" width="300" class="d-inline-block align-top" alt="">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" class="d-inline-block align-top logo" alt="">
         </a>
         
         <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -69,23 +69,15 @@
       </div>
     </nav>
 
-<!--     <ul id="myMenu">
-      <li data-menuanchor="home-container" class="active"><a href="">Главная</a></li>
-      <li data-menuanchor="services-container"><a href="#services">Услуги</a></li>
-    </ul> -->
-
     <div id="fullpage">
       <div class="section" data-anchor="home-container">
         <div class="main">
-          <div id="particles-js"></div>
-          <div class="container-fluid">
-          <div class="textBlock">
-            <h1>Студия дизайна<br>и web разработки</h1>
-            <a href="#contacts-container">ОСТАВИТЬ ЗАЯВКУ</a>
-          </div>
-          <!-- <img src="img/robot.png" class="d-inline-block align-bottom float-right" style="margin-right: 200px;" alt=""> -->
-          <img src="img/robot.png" class="img-responsive" alt="">
-        </div>
+            <div id="particles-js"></div>
+            <div class="textBlock">
+              <h1 class="mainTitle">Студия дизайна<br>и web разработки</h1>
+              <a class="mainLink" href="#contacts-container">ОСТАВИТЬ ЗАЯВКУ</a>
+            </div>
+            <img src="img/robot.png" class="img-responsive robotImg" alt="">
         </div>
       </div>
 
@@ -95,18 +87,17 @@
           <div class="container-fluid">
             <div class="textBlock">
               <h2>Услуги</h2>
-              <div class="line1"></div>
             </div>
-            <div class="imgBlock">
-              <div class="serviceInfo">
+            <div class="row imgBlock" style="padding: 0; margin: 0;">
+              <div class="col-lg-4 col-md-4 col-sm-6 serviceInfo">
                 <img src="img/computer.png" class="img-responsive" alt="">
                 <p>Разработка сайтов</p>
               </div>
-              <div class="serviceInfo">
+              <div class="col-lg-4 col-md-4 col-sm-6 serviceInfo">
                 <img src="img/creative.png" class="img-responsive" alt="">
                 <p>Дизайн и креатив</p>
               </div>
-              <div class="serviceInfo">
+              <div class="col-lg-4 col-md-4 col-sm-12 serviceInfo">
                 <img src="img/docs.png" class="img-responsive" alt="">
                 <p>Реклама в интернете</p>
               </div>
@@ -122,19 +113,19 @@
             <div class="textBlock">
               <h2>Наши преимущества</h2>
             </div>
-            <div class="imgBlock">
-              <div class="serviceInfo">
-                <img src="img/chess.png" class="img-responsive" alt="">
+            <div class="row imgBlock">
+              <div class="col-lg-4 col-md-4 col-sm-6 serviceInfo">
+                <img src="img/chess.png" class="img-responsive imgAdvantages" alt="">
                 <p>Грамотное планирование<br>и выполнение сроков</p>
                 <h3>Мы гарантируем вам скрупулезное<br>планирование всех этапов работ<br>и выполнение проекта точно в срок</h3>
               </div>
-              <div class="serviceInfo">
-                <img src="img/search.png" class="img-responsive" alt="">
+              <div class="col-lg-4 col-md-4 col-sm-6 serviceInfo">
+                <img src="img/search.png" class="img-responsive imgAdvantages" alt="">
                 <p>Контроль качества<br>на всех этапах</p>
                 <h3>Каждый этап работ подвергается<br>многоэтапной проверке и контролю<br>со стороны наших специалистов</h3>
               </div>
-              <div class="serviceInfo">
-                <img src="img/suit.png" class="img-responsive" alt="">
+              <div class="col-lg-4 col-md-4 col-sm-12 serviceInfo">
+                <img src="img/suit.png" class="img-responsive imgAdvantages" alt="">
                 <p>Индивидуальный подход<br>к каждому бизнесу</p>
                 <h3>Мы обеспечиваем индивидуальный подход к<br>потребностям Заказчика, помогаем в формализации<br>требований и его пожеланий к проекту</h3>
               </div>
@@ -148,9 +139,10 @@
           <div id="particles-js-3"></div>
           <div class="container-fluid">
             <div class="row">
-              <div class="col-md-6 col-sm-6 col-6 requistion">
-                <h3>Оставьте заявку</h3>
-                <div class="line2"></div>
+              <div class="col-md-6 col-sm-12 col-12 requistion">
+                <div class="contactsTextBlock">
+                  <h3 class="contactsTitle">Оставьте заявку</h3>
+                </div>
                 <form>
                   <input type="text" name="firstname" placeholder="Ваше имя"><br>
                   <input type="text" name="telephone" placeholder="Телефон*"><br>
@@ -173,16 +165,17 @@
                 </div>
 
                 <!-- Link to open the modal -->
-                <p>Вводя свои данные я соглашаюсь с <a href="#ex1" rel="modal:open">политикой конфиденциальности</a></p>
+                <p>Вводя свои данные я соглашаюсь с <a href="#ex1" rel="modal:open">политикой<br>конфиденциальности</a></p>
 
               </div>
-              <div class="col-md-6 col-sm-6 col-6 contactBlock">
-                <h3>Контакты</h3>
-                <div class="line3"></div>
-                <div style="margin-top: 40px;">
+              <div class="col-md-6 col-sm-12 col-12 contactBlock">
+                <div class="contactsTextBlock">
+                  <h3 class="contactsTitle">Контакты</h3>
+                </div>
+                <div>
                   <div class="contactTextBlock">
-                    <p style="font-weight: bold;">Телефон:  </p><br>
-                    <p> 8 (800) 000-00-00</p>
+                    <p style="font-weight: bold;">Телефон:  </p>
+                    <p>8 (800) 000-00-00</p>
                   </div>
                   <div class="contactImages">
                     <a href=""><img src="img/telegram.png"></a>
@@ -217,18 +210,18 @@
     <script src="js/fullpage.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        
+
         $('.first-button').on('click', function () {
           $('.animated-icon1').toggleClass('open');
         });
 
-        $('a[href="#ex1"]').click(function(event){
-          event.preventDefault();
-          $(this).modal({
-            closeClass: 'icon-remove',
-            closeText: '!'
-          });
-        });
+        // $('a[href="#ex1"]').click(function(event){
+        //   event.preventDefault();
+        //   $(this).modal({
+        //     closeClass: 'icon-remove',
+        //     closeText: '!'
+        //   });
+        // });
 
         var fullpage = $('#fullpage').fullpage({
           //options here
@@ -238,14 +231,14 @@
           css3: true,
           navigation: true,
           navigationTooltips: ['01', '02', '03', '04'],
-          sectionsColor: ['#202020', '#202020', '#202020', '#202020'],
+          sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent'],
           showActiveTooltip: true,
           autoScrolling:true,
           scrollHorizontally: true
         });
 
         //methods
-        $.fn.fullpage.setAllowScrolling(true);
+        // $.fn.fullpage.setAllowScrolling(true);
       });
     </script>
 
