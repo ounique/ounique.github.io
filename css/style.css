@@ -514,7 +514,6 @@ body {display: flex;}
 		margin-bottom: 2vh;
 		background-color: #202020;
 		color: white;
-		vertical-align: middle;
 		font-size: 13px;
 		box-shadow: 0 0 5px #ffb600;
 		border-radius: 5px;
@@ -603,7 +602,6 @@ body {display: flex;}
 	    cursor: pointer;
 		background-color: #202020;
 		color: white;
-		/*padding: 1.5vh 8.5vw;*/
 		font-size: 13px;
 		box-shadow: 0 0 5px #ffb600;
 		border-radius: 5px;
@@ -696,8 +694,6 @@ body {display: flex;}
 	    cursor: pointer;
 		background-color: #202020;
 		color: white;
-		padding-top: 8px;
-		/*padding: 1.5vh 8.5vw;*/
 		font-size: 13px;
 		box-shadow: 0 0 5px #ffb600;
 		border-radius: 5px;
