@@ -506,6 +506,7 @@ body {display: flex;}
 	.custom-file-upload {
 		width: 24vw;
 		height: 5.5vh;
+		line-height: 5.5vh;
 	    border: 1px solid #ccc;
 	    border-style: dashed;
 	    text-align: center;
@@ -513,8 +514,7 @@ body {display: flex;}
 		margin-bottom: 2vh;
 		background-color: #202020;
 		color: white;
-		padding-top: 1.5vh;
-		/*padding: 1.5vh 8.5vw;*/
+		vertical-align: middle;
 		font-size: 13px;
 		box-shadow: 0 0 5px #ffb600;
 		border-radius: 5px;
@@ -595,6 +595,7 @@ body {display: flex;}
 	.custom-file-upload {
 		width: 300px;
 		height: 35px;
+		line-height: 35px;
 		margin-bottom: 15px;
 	    border: 1px solid #ccc;
 	    border-style: dashed;
@@ -602,7 +603,6 @@ body {display: flex;}
 	    cursor: pointer;
 		background-color: #202020;
 		color: white;
-		padding-top: 8px;
 		/*padding: 1.5vh 8.5vw;*/
 		font-size: 13px;
 		box-shadow: 0 0 5px #ffb600;
@@ -688,6 +688,7 @@ body {display: flex;}
 	.custom-file-upload {
 		width: 180px;
 		height: 35px;
+		line-height: 35px;
 		margin-bottom: 15px;
 	    border: 1px solid #ccc;
 	    border-style: dashed;
@@ -799,7 +800,8 @@ body {display: flex;}
 	}
 
 	.modal {
-		width: 80vw !important;
+		width: 60vw !important;
+		min-width: 60vw !important;
 	}
 
 	.close-modal {
