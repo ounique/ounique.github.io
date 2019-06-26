@@ -53,16 +53,16 @@
         <div class="collapse navbar-collapse mr-5 mx-auto" id="navbarResponsive">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-ul">
             <li class="nav-item">
-              <a class="nav-link link" href="#home-container">Главная</a>
+              <a id="scrollToMain" class="nav-link link" href="#home-container">Главная</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link" href="#services-container">Услуги</a>
+              <a id="scrollToServices" class="nav-link link" href="#services-container">Услуги</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link" href="#advantages-container">Наши преимущества</a>
+              <a id="scrollToAdvantages" class="nav-link link" href="#advantages-container">Наши преимущества</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link" href="#contacts-container">Оставить заявку</a>
+              <a id="scrollToContacts" class="nav-link link" href="#contacts-container">Оставить заявку</a>
             </li>
           </ul>
         </div>
@@ -70,18 +70,19 @@
     </nav>
 
     <div id="fullpage">
-      <div class="section" data-anchor="home-container">
+
+      <div class="section" data-anchor="home-container" id="mainContainer">
         <div class="main">
             <div id="particles-js"></div>
             <div class="textBlock">
               <h1 class="mainTitle">Студия дизайна<br>и web разработки</h1>
-              <a class="mainLink" href="#contacts-container">ОСТАВИТЬ ЗАЯВКУ</a>
+              <a id="scrollToContacts" class="mainLink" href="#contacts-container">ОСТАВИТЬ ЗАЯВКУ</a>
             </div>
             <img src="img/robot.png" class="img-responsive robotImg" alt="">
         </div>
       </div>
 
-      <div class="section" data-anchor="services-container">
+      <div class="section" data-anchor="services-container" id="servicesContainer">
         <div class="services">
           <div id="particles-js-1"></div>
           <div class="container-fluid">
@@ -106,7 +107,7 @@
         </div>
       </div>
 
-      <div class="section" data-anchor="advantages-container">
+      <div class="section" data-anchor="advantages-container" id="advantagesContainer">
         <div class="advantages">
           <div id="particles-js-2"></div>
           <div class="container-fluid">
@@ -134,7 +135,7 @@
         </div>
       </div>
 
-      <div class="section" data-anchor="contacts-container">
+      <div class="section" data-anchor="contacts-container" id="contactsContainer">
         <div class="contacts">
           <div id="particles-js-3"></div>
           <div class="container-fluid">
@@ -154,7 +155,7 @@
                     </label>
                     <input id="file-upload" name="file" type="file"/>
                   </div>
-                  <input type="submit"><br>
+                  <input type="submit" value="отправить"><br>
                 </form>
                 <!-- Modal HTML embedded directly into document -->
                 <div id="ex1" class="modal">
@@ -209,36 +210,48 @@
 
     <script src="js/fullpage.js"></script>
     <script type="text/javascript">
-      $(document).ready(function() {
-
+      $(document).ready(function($) {
         $('.first-button').on('click', function () {
           $('.animated-icon1').toggleClass('open');
         });
+        
+        if ($(window).width() > 540) {
+          var fullpage = $('#fullpage').fullpage({
+            //options here
+            anchors: ['home-container','services-container', 'advantages-container', 'contacts-container'],
+            menu: '#myMenu',
+            easing: 'easeInOutExpo',
+            css3: true,
+            navigation: true,
+            navigationTooltips: ['01', '02', '03', '04'],
+            sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent'],
+            showActiveTooltip: true,
+            autoScrolling:true,
+            scrollHorizontally: true
+          });
+        } else {
+           $('#scrollToMain').click(function(e) {
+              $('html, body').animate({
+                  scrollTop: $("#mainContainer").offset().top-30
+              }, 1000, 'swing');
+          });
+          $('#scrollToServices').click(function(e) {
+              $('html, body').animate({
+                  scrollTop: $("#servicesContainer").offset().top-30
+              }, 1000, 'swing');
+          });
+          $('#scrollToAdvantages').click(function(e) {
+              $('html, body').animate({
+                  scrollTop: $("#advantagesContainer").offset().top-30
+              }, 1000, 'swing');
+          });
+          $('#scrollToContacts').click(function(e) {
+              $('html, body').animate({
+                  scrollTop: $("#contactsContainer").offset().top-30
+              }, 1000, 'swing');
+          });
+        }
 
-        // $('a[href="#ex1"]').click(function(event){
-        //   event.preventDefault();
-        //   $(this).modal({
-        //     closeClass: 'icon-remove',
-        //     closeText: '!'
-        //   });
-        // });
-
-        var fullpage = $('#fullpage').fullpage({
-          //options here
-          anchors: ['home-container','services-container', 'advantages-container', 'contacts-container'],
-          menu: '#myMenu',
-          easing: 'easeInOutExpo',
-          css3: true,
-          navigation: true,
-          navigationTooltips: ['01', '02', '03', '04'],
-          sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent'],
-          showActiveTooltip: true,
-          autoScrolling:true,
-          scrollHorizontally: true
-        });
-
-        //methods
-        // $.fn.fullpage.setAllowScrolling(true);
       });
     </script>
 

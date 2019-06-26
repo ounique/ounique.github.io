@@ -69,27 +69,6 @@ top: 11px;
 transform: rotate(-135deg);
 }
 
-.bannerformmodal {
-	position: absolute;
-	color: black;
-	background-color: white;
-}
-
-.modal > p{
-	text-align: center;
-	padding: 25px;
-}
-
-.modal {
-	width: 50vw !important;
-}
-
-.close-modal {
-  right: 10px !important;
-  top: 10px !important;
-  background-image: url("../img/close.png") !important;
-}
-
 
 html, body { height: 100% }
 body {display: flex;}
@@ -279,6 +258,7 @@ body {display: flex;}
 		margin-right: 0vw;
 		text-align: center;
 		height: 55vh;
+		visibility: hidden;
 	}
 }
 /* SERVICES */
@@ -675,6 +655,9 @@ body {display: flex;}
 		display: inline-block;
 		border-bottom: 4px solid #ffb600;
 	}
+	.contacts {
+		padding-top: 20vh;
+	}
 }
 
 @media(min-width: 0px) and (max-width: 539px) {
@@ -764,5 +747,61 @@ body {display: flex;}
 	.contactsTextBlock {
 		display: inline-block;
 		border-bottom: 4px solid #ffb600;
+	}
+
+	.section {
+		position: relative;
+	}
+
+	.contacts {
+		padding-bottom: 50px;
+	}
+}
+
+
+@media(min-width: 0px) and (max-width: 539px) {
+	.bannerformmodal {
+		position: absolute;
+		color: black;
+		background-color: white;
+	}
+
+	.modal > p{
+		text-align: center;
+		padding: 10px;
+		font-size: 13px;
+	}
+
+	.modal {
+		width: 70vw !important;
+	}
+
+	.close-modal {
+	  right: 10px !important;
+	  top: 10px !important;
+	  background-image: url("../img/close.png") !important;
+	}
+}
+
+@media(min-width: 540px) {
+	.bannerformmodal {
+		position: absolute;
+		color: black;
+		background-color: white;
+	}
+
+	.modal > p{
+		text-align: center;
+		padding: 25px;
+	}
+
+	.modal {
+		width: 50vw !important;
+	}
+
+	.close-modal {
+	  right: 10px !important;
+	  top: 10px !important;
+	  background-image: url("../img/close.png") !important;
 	}
 }
