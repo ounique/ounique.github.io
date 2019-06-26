@@ -178,7 +178,7 @@ body {display: flex;}
 @media(min-width: 540px) and (max-width: 767px)  {
 
 	.logo {width: 200px;}
-	.nav-item{text-align: right;}
+	.nav-item{text-align: right; background-color: rgba(0,0,0,0.9); padding-right: 20px;}
 	.navbar {font-size: 2.5vh;margin-top: 5vh;font-weight: 200;font-family: 'Exo 2', sans-serif;}
 	.main {text-align: center;}
 
@@ -221,7 +221,7 @@ body {display: flex;}
 @media(min-width: 0px) and (max-width: 540px) {
 
 	.logo {width: 200px;}
-	.nav-item{text-align: right;}
+	.nav-item{text-align: right; background-color: rgba(0,0,0,0.9); padding-right: 20px;}
 	.navbar {font-size: 2.5vh;margin-top: 5vh;font-weight: 200;font-family: 'Exo 2', sans-serif;}
 	.main {text-align: center;}
 
@@ -781,6 +781,7 @@ body {display: flex;}
 	  top: 10px !important;
 	  background-image: url("../img/close.png") !important;
 	}
+
 }
 
 @media(min-width: 540px) {
