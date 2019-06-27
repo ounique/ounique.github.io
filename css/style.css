@@ -204,7 +204,7 @@ body {display: flex;}
 
 @media(min-width: 0px) and (max-width: 540px) {
 
-	.logoInBlock {width: 300px; margin-top: 150px;}
+	.logoInBlock {width: 250px; margin-top: 150px;}
 	.nav-item{text-align: right; background-color: rgba(0,0,0,0.9); padding-right: 20px;}
 	.navbar {font-size: 2.5vh;margin-top: 5vh;font-weight: 200;font-family: 'Exo 2', sans-serif;}
 	.main {text-align: center;}
